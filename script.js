@@ -28,12 +28,12 @@ document.getElementById("copyIcon").addEventListener("click", function () {
 	  .writeText(hexCode)
 	  .then(function () {
 		// Mostrar mensaje "Copiado al portapapeles"
-		hexCodeElement.innerText = "Copiado al portapapeles";
+		hexCodeElement.innerText = "¡Copiado!";
   
 		// Esperar 2 segundos y volver a mostrar el código original
 		setTimeout(function () {
 		  hexCodeElement.innerText = hexCode;
-		}, 500);
+		}, 1000);
 	  })
 	  .catch(function (error) {
 		console.error("Error al copiar al portapapeles:", error);
