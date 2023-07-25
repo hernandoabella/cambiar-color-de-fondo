@@ -38,6 +38,7 @@ body {
   font-weight: bold;
   width: 100%;
   text-align: center;
+  margin-right: 10px;
 }
 
 #copyBtn {
@@ -86,4 +87,3 @@ body {
     background-position: var(--width);
   }
 }
-
