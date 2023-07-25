@@ -39,7 +39,7 @@ body {
   padding: 10px;
   cursor: pointer;
   border: none;
-  background: rgb(77, 64, 192);
+  background: rgb(0, 0, 0);
   color: #fff;
   border-radius: 12px;
   transition: all 0.2s;
@@ -63,7 +63,7 @@ body {
   font-size: 1em;
   background: rgb(64, 192, 87);
   transition: all 0.2s;
-  border-radius: 3px;
+  border-radius: 12px;
 }
 
 .bgBtn:hover {
