@@ -1,57 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  background-image: linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%);
+  background: #F761A1;
   font-family: "Roboto", sans-serif;
+  transition: .3s;
 }
 
 .container {
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
+  background: #fff;
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 320px;
-  height: 250px;
+  padding: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.hexColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 12px 0px 0px 12px;
 }
 
 .hex {
+  font-size: 2em;
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
   font-weight: bold;
 }
 
-.hexName {
-  transform: translate(-50%, -120%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  text-align: center;
-  font-size: 1.3em;
+#copyBtn {
+  font-size: 2em;
   padding: 10px;
-  border-radius: 12px;
-}
-
-button {
-  padding: 10px;
-  text-align: center;
-  border-radius: 12px;
-  transform: translate(-50%, 100%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
   cursor: pointer;
-  transition: 0.3s;
-  font-size: 1rem;
-  font-family: inherit;
-  width: 60%;
   border: none;
-  outline: none;
 }
 
-.fa-copy {
+.hexBtn {
+  margin-top: 30px;
   cursor: pointer;
+  border: none;
 }
+
+/* this button is inspired from this -- https://www.newline.co/pricing */
+button {
+  --width: 100%;
+  --timing: 2s;
+  border: 0;
+  width: var(--width);
+  padding-block: 1em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  background: rgb(64, 192, 87);
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+  animation: var(--timing) linear dance6123 infinite;
+}
+
+button:active {
+  transform: scale(1.1) translateY(-1px);
+}
+
+@keyframes dance6123 {
+  to {
+    background-position: var(--width);
+  }
+}
+
