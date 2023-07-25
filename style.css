@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  background: #F761A1;
+  background: #e6e6e6;
   font-family: "Roboto", sans-serif;
   transition: .3s;
 }
@@ -16,22 +16,28 @@ body {
   transform: translate(-50%, -50%);
   padding: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 300px;
+}
+
+.hexFlex {
+  display: flex;
 }
 
 .hexColor {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f5;
   border-radius: 12px 0px 0px 12px;
 }
 
 .hex {
   font-size: 2em;
-  padding: 40px;
+  padding: 10px;
   border-radius: 12px;
-  text-align: center;
+  background: #f5f5f5;
   font-weight: bold;
+  width: 100%;
+  text-align: center;
 }
 
 #copyBtn {
@@ -39,7 +45,7 @@ body {
   padding: 10px;
   cursor: pointer;
   border: none;
-  background: rgb(0, 0, 0);
+  background: rgb(58, 58, 58);
   color: #fff;
   border-radius: 12px;
   transition: all 0.2s;
