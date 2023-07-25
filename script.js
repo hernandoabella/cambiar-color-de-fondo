@@ -12,31 +12,29 @@ hexBtn.addEventListener(
     for (let i = 0; i < 6; i++) {
       let random = Math.floor(Math.random() * hexNumbers.length);
       color += hexNumbers[random];
-
-      bgColor.style.backgroundColor = color;
-
-      colorCode.innerHTML = color;
     }
+
+    bgColor.style.backgroundColor = color;
+    colorCode.innerHTML = color;
   })
 );
 
-document.getElementById("copyIcon").addEventListener("click", function () {
-	const hexCodeElement = document.querySelector(".hex");
-	const hexCode = hexCodeElement.innerText;
-  
-	navigator.clipboard
-	  .writeText(hexCode)
-	  .then(function () {
-		// Mostrar mensaje "Copiado al portapapeles"
-		hexCodeElement.innerText = "¡Copiado!";
-  
-		// Esperar 2 segundos y volver a mostrar el código original
-		setTimeout(function () {
-		  hexCodeElement.innerText = hexCode;
-		}, 1000);
-	  })
-	  .catch(function (error) {
-		console.error("Error al copiar al portapapeles:", error);
-	  });
-  });
-  
+document.getElementById("copyBtn").addEventListener("click", function () {
+  const hexCodeElement = document.querySelector(".hex");
+  const hexCode = hexCodeElement.innerText;
+
+  navigator.clipboard
+    .writeText(hexCode)
+    .then(function () {
+      // Mostrar mensaje "Copiado al portapapeles"
+      hexCodeElement.innerText = "¡Copiado!";
+
+      // Esperar 2 segundos y volver a mostrar el código original
+      setTimeout(function () {
+        hexCodeElement.innerText = hexCode;
+      }, 1000);
+    })
+    .catch(function (error) {
+      console.error("Error al copiar al portapapeles:", error);
+    });
+});
