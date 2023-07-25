@@ -1,5 +1,5 @@
 let bgColor = document.querySelector("body");
-let hexBtn = document.querySelector(".hexBtn");
+let hexBtn = document.querySelector(".bgBtn");
 let colorCode = document.querySelector(".hex");
 
 const hexNumbers = ["A", "B", "C", "D", "E", "F", 1, 2, 3, 4, 5, 6];
